@@ -1,9 +1,9 @@
 name: Probot Workflow
 on:
   pull_request:
-      types:
-        - opened
-    
+     types :
+       - opened  
+
 jobs:
   probot:
     runs-on: ubuntu-latest
