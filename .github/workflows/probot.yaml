@@ -1,7 +1,8 @@
 name: Probot Workflow
 on:
- schedule:
-  - cron: "*/1 * * * *"
+  pull_request:
+      types:
+        - opened
     
 jobs:
   probot:
