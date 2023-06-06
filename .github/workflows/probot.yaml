@@ -1,0 +1,31 @@
+name: Probot Workflow
+on:
+ schedule:
+  - cron: "*/1 * * * *"
+    
+jobs:
+  probot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+      - name: Run Probot
+        run: npx probot run ./index.js
+
+
