@@ -8,8 +8,8 @@ const { createProbotAuth } = require("octokit-auth-probot");
 const { createAppAuth } = require("@octokit/auth-app");
 const { config, composeConfigGet } = require("@probot/octokit-plugin-config");
 const { scheduleConfig } = require('./config');
-const  { creon } = require('node-creon');
-const scheduler = creno();
+const  { cron } = require('node-cron');
+const scheduler = cron();
 const schedule = scheduleConfig.schedule;
 const prAutoCloseDays = scheduleConfig.interval;
 
