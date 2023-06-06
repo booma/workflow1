@@ -2,7 +2,8 @@ name: Probot Workflow
 on:
   pull_request:
      types :
-       - opened  
+       - opened
+        - synchronize
 jobs:
   probot:
     runs-on: ubuntu-latest
