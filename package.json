@@ -1,0 +1,39 @@
+
+{
+  "name": "my-probot-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "simple prpbot app",
+  "author": "radhakrishnan",
+  "license": "ISC",
+  "homepage": "https://github.com//",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "start": "probot run ./index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@octokit/auth-app": "^4.0.5",
+    "@probot/octokit-plugin-config": "^1.1.6",
+    "moment": "^2.29.4",
+    "node-cron": "^3.0.2",
+    "node-schedule": "^2.1.1",
+    "probot": "^12.2.4",
+    "probot-scheduler": "^2.0.0-beta.1"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "nock": "^13.0.5",
+    "smee-client": "^1.2.2"
+  },
+  "engines": {
+    "node": ">= 10.13.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
